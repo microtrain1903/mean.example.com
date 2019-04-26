@@ -1,5 +1,3 @@
-//TODO: publication dates
-
 var articlesApp = (function () {
 
   function viewArticles() {
@@ -140,7 +138,6 @@ var articlesApp = (function () {
 
       let app = document.getElementById('app');
       let data = JSON.parse(xhr.response);
-
       let card = '';
 
       card = `<div class="card">
@@ -303,15 +300,15 @@ var articlesApp = (function () {
             <div class="card-body text-center">
               <div>
                 Are you sure you want to delete
-                <strong>${data.article.title}</strong>
+                <strong>${data.post.title}</strong>
               </div>
 
-              <div>Summary: <strong>${data.article.description}</strong></div>
+              <div>Summary: <strong>${data.post.description}</strong></div>
 
               <div class="text-center">
                 <br>
-                <a onclick="articlesApp.deleteArticle('${data.article._id}');" class="btn btn-lg btn-danger text-white">
-                  Yes delete ${data.article.description}
+                <a onclick="articlesApp.deleteArticle('${data.post._id}');" class="btn btn-lg btn-danger text-white">
+                  Yes delete ${data.post.description}
                 </a>
               </div>
 
